@@ -27,6 +27,14 @@
             android:summaryOn="Make Text Regular"
             />
 
+
+        <SeekBarPreference
+            app:title="Icon Size"
+            app:key="icon_size"
+            app:summary="Adjust your icon size using the seekbar"
+            android:max="1024"
+            app:min="256"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

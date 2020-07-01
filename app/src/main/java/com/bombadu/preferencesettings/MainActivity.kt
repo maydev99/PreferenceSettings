@@ -8,8 +8,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,12 +46,20 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
 
         val myEditText = findViewById<EditText>(R.id.myEditText)
+        val myIcon = findViewById<ImageView>(R.id.myImageView)
 
         val sharedPreferences: SharedPreferences =
             PreferenceManager.getDefaultSharedPreferences(this)
         val redText = sharedPreferences.getBoolean("red_text", false)
         val largeText = sharedPreferences.getBoolean("large_text", false)
         val boldText = sharedPreferences.getBoolean("bold_text", false)
+        val iconSize = sharedPreferences.getInt("icon_size", 64)
+
+        myImageView.layoutParams.height = iconSize
+        myImageView.layoutParams.width = iconSize
+        myImageView.requestLayout()
+
+
 
 
         when {
