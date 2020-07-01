@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:allowDividerBelow="true"
+        app:layout="@layout/preference_category_title"
+
+        >
+
+        <SwitchPreferenceCompat
+            app:key="red_text"
+            android:summaryOff="Make Text Red"
+            android:summaryOn="Make Text Black"
+            app:title="Red Text" />
+
+        <SwitchPreferenceCompat
+            android:title="Large Text"
+            app:key="large_text"
+            app:summaryOff="Make Text Large"
+            app:summaryOn="Make Text Regular"
+            app:title="Large Text" />
+
+        <SwitchPreferenceCompat
+            app:key="bold_text"
+            app:title="Bold Text"
+            android:summaryOff="Make Text Bold"
+            android:summaryOn="Make Text Regular"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
